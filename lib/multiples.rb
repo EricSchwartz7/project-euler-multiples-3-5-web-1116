@@ -12,8 +12,12 @@ def collect_multiples(limit)
   array
 end
 
-def sum_multiples(limit)
-  total = 0
-  collect_multiples(limit).each {|num| total += num}
-  total
+# def sum_multiples(limit)
+#   total = 0
+#   collect_multiples(limit).each {|num| total += num}
+#   total
+# end
+
+def sum_multiples
+  collect_multiples.reduce(:+)
 end

@@ -18,10 +18,13 @@ class Multiples
     array
   end
 
+  # def sum_multiples
+  #   total = 0
+  #   collect_multiples.inject {|num| total += num}
+  #   total
+  # end
   def sum_multiples
-    total = 0
-    collect_multiples.each {|num| total += num}
-    total
+    collect_multiples.reduce(:+)
   end
 
 end
